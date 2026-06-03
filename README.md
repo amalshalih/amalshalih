@@ -40,8 +40,12 @@
 ## 📊 GitHub Stats
 
 <div align="center">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=it-amma&show_icons=true&theme=green&hide_border=true&bg_color=0d1117&title_color=4CAF50&icon_color=81C784&text_color=ffffff" alt="GitHub Stats">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=it-amma&layout=compact&theme=green&hide_border=true&bg_color=0d1117&title_color=4CAF50&text_color=ffffff" alt="Top Languages">
+  <img height="180em" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=it-amma&theme=github_dark" alt="GitHub Profile">
+</div>
+
+<div align="center">
+  <img height="180em" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=it-amma&theme=github_dark" alt="GitHub Stats">
+  <img height="180em" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=it-amma&theme=github_dark" alt="Top Languages">
 </div>
 
 ## 🛠️ Tech Stack
