@@ -272,15 +272,15 @@ These docs are **RESTRICTED** (IT/Pengurus only):
 
 ## 🚀 Future Enhancements
 
-### **Phase 1: Foundation (CURRENT ✅)**
+### **Phase 1: Foundation (DONE ✅)**
 - [x] Consolidate all knowledge in `.openkb/`
 - [x] Structure by user journey
 - [x] AI agent integration ready
-- [ ] Deploy to `amalshalih/amalshalih` repo
+- [x] Deploy to `amalshalih/amalshalih` repo
 
-### **Phase 2: AI Integration (NEXT)**
-- [ ] Create `60-ai-agents/` section
-- [ ] Build AI context prompts
+### **Phase 2: AI Integration (IN PROGRESS 🔄)**
+- [x] Create `60-ai-agents/` section
+- [x] Build AI context prompts
 - [ ] Integrate with Claude/Cursor
 - [ ] AI-assisted documentation updates
 

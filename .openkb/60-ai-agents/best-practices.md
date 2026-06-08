@@ -47,7 +47,7 @@ Jika Anda menggunakan custom tool seperti Cursor atau Claude Projects, pastikan 
 Untuk AI yang membantu pengembangan website:
 - Selalu minta AI menulis kode TypeScript yang **type-safe**.
 - **JANGAN** toleransi penggunaan `as any`, `@ts-ignore`, atau bypass linter lainnya.
-- Minta AI memeriksa compatibility Cloudflare Workers sebelum mendeploy (`.openkb/40-it-teknis/WORKERD_COMPATIBILITY_AUDIT.md`).
+- Minta AI memeriksa compatibility Cloudflare Workers sebelum mendeploy ([WORKERD_COMPATIBILITY_AUDIT.md](https://github.com/amalshalih/amalshalih.github.io/blob/main/.openkb/10-arsitektur/WORKERD_COMPATIBILITY_AUDIT.md)).
 
 ---
 

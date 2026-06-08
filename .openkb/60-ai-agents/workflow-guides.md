@@ -80,11 +80,11 @@ Di Yayasan Amal Shalih Insan Bantul, kita mengadopsi model **Human-in-the-Loop**
    - Sentry mendeteksi error di website `amalshalih.or.id` dan mengirim notifikasi ke email `info@amalshalih.or.id` / Discord IT.
 2. **AI menganalisis error:**
    - IT engineer memberikan trace error ke AI: *"Ada crash di halaman detail kegiatan. Ini logs dari Sentry."*
-   - AI membaca Technical Docs (`.openkb/40-it-teknis/`) dan CMS Integration (`.openkb/40-it-teknis/cms-integration.md`).
+   - AI membaca Technical Docs (`.openkb/40-it-teknis/`) dan CMS Integration di website repo ([`.openkb/20-cms-dan-konten/cms-integration.md`](https://github.com/amalshalih/amalshalih.github.io/blob/main/.openkb/20-cms-dan-konten/cms-integration.md)).
 3. **AI menyarankan perbaikan:**
-   - AI menulis kode perbaikan, memverifikasi kompatibilitas Cloudflare Workers (`.openkb/40-it-teknis/WORKERD_COMPATIBILITY_AUDIT.md`), dan memastikan type-safety.
+   - AI menulis kode perbaikan, memverifikasi kompatibilitas Cloudflare Workers ([WORKERD_COMPATIBILITY_AUDIT.md](https://github.com/amalshalih/amalshalih.github.io/blob/main/.openkb/10-arsitektur/WORKERD_COMPATIBILITY_AUDIT.md)), dan memastikan type-safety.
 4. **Developer melakukan deploy:**
-   - IT engineer menguji perbaikan di staging, membuat commit sesuai aturan (`.openkb/40-it-teknis/commit-strategy.md`), dan mendeploy ke Cloudflare Workers (`.openkb/40-it-teknis/deployment.md`).
+   - IT engineer menguji perbaikan di staging, membuat commit sesuai aturan ([commit-strategy.md](https://github.com/amalshalih/amalshalih.github.io/blob/main/.openkb/30-deploy/commit-strategy.md)), dan mendeploy ke Cloudflare Workers ([deployment.md](https://github.com/amalshalih/amalshalih.github.io/blob/main/.openkb/30-deploy/deployment.md)).
 
 ---
 

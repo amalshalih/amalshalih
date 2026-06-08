@@ -24,7 +24,8 @@ Before taking any action, you must ingest and index the following folders in `.o
 4. **`30-templates/`** — Reusable document formats
 5. **`40-it-teknis/`** — Domain strategy, security guidelines, credentials, and codebases
 6. **`50-legal/`** — Compliance (Privacy, Terms of Service, Document Retention)
-7. **`90-archive/`** — Archive procedures
+7. **`60-ai-agents/`** — AI agent guidelines, best practices, and workflow guides
+8. **`90-archive/`** — Archive procedures
 
 ---
 

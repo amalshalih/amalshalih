@@ -241,7 +241,7 @@ Routing Rules:
 
 **Status:** ✅ All routing rules verified & active per 7 Juni 2026
 
-**Setup Guide:** [Lihat docs/10-organisasi/email-dan-akses.md](../10-organisasi/email-dan-akses.md)
+**Setup Guide:** [Lihat Email & Akses](../10-organisasi/email-dan-akses.md)
 
 ### **Google Workspace (Nonprofit):**
 
