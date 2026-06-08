@@ -4,7 +4,7 @@
 > **Audience:** Operator (manusia) + AI Agent + Consumer (dengan authorization)  
 > **Framework:** Based on [ainjiner/openkb](https://github.com/ainjiner/openkb)  
 > **Status:** ✅ **ACTIVE** — Production Ready  
-> **Last Updated:** 7 Juni 2026
+> **Last Updated:** 8 Juni 2026
 
 ---
 
@@ -31,54 +31,50 @@
 .openkb/
 ├── README.md (this file — OpenKB index)
 ├── 00-start-here/
-│   └── README.md (getting started guide)
+│   ├── README.md (getting started guide)
+│   └── PROJECT_STATUS.md (project progress tracking)
 ├── 10-organisasi/
-│   ├── struktur-dan-role.md
 │   ├── email-dan-akses.md
-│   └── humas-decision-analysis.md
+│   ├── humas-decision-analysis.md
+│   ├── struktur-dan-role.md
+│   ├── workspace-management.md
+│   └── yayasan-profile.md
 ├── 20-sop/
-│   ├── rapat-workflow.md
-│   ├── kegiatan-workflow.md
-│   ├── media-sosial.md
 │   ├── donasi-handling.md
-│   └── onboarding-relawan.md
+│   ├── GALERI_GOOGLE_DRIVE.md (panduan galeri Google Drive)
+│   ├── kegiatan-workflow.md
+│   ├── KONVENSI_NAMA_FOLDER.md (konvensi penamaan folder)
+│   ├── media-sosial.md
+│   ├── onboarding-relawan.md
+│   ├── PANDUAN_UPLOAD_FOTO_TIM_MEDIA.md (panduan upload foto)
+│   ├── rapat-workflow.md
+│   └── workflow-kanban.md
 ├── 30-templates/
-│   ├── template-agenda.md
-│   ├── template-notulen.md
-│   ├── template-decision-log.md
-│   ├── kwitansi-donasi.md
-│   ├── laporan-bulanan.md
-│   ├── content-calendar.md
 │   ├── analytics-report.md
 │   ├── caption-templates.md
+│   ├── content-calendar.md
 │   ├── email-templates.md
+│   ├── kwitansi-donasi.md
+│   ├── laporan-bulanan.md
+│   ├── laporan-keuangan.md
 │   ├── rab-template.md
-│   └── laporan-keuangan.md
+│   ├── template-agenda.md
+│   ├── template-decision-log.md
+│   └── template-notulen.md
 ├── 40-it-teknis/
-│   ├── infrastructure.md
-│   ├── security.md
 │   ├── credentials.md
-│   ├── ARCHITECTURE.md
-│   ├── ASTRO_V6_CLOUDFLARE_CONFIG_AUDIT.md
-│   ├── CLEAN_CONFIGURATION_SUMMARY.md
-│   ├── DATA_SOURCES.md
-│   ├── ROOT_LEVEL_WRANGLER_CONFIG.md
-│   ├── WORKERD_COMPATIBILITY_AUDIT.md
-│   └── WRANGLER_PREVIEW_ERROR_10015.md
+│   ├── infrastructure.md
+│   └── security.md
 ├── 50-legal/
+│   ├── document-storage.md
 │   ├── privacy-policy.md
-│   ├── terms-of-service.md
-│   └── document-storage.md
-├── 60-ai-agents/ (NEW!)
-│   ├── context-prompt.md (AI context & instructions)
-│   ├── workflow-guides.md (AI-assisted workflows)
-│   └── best-practices.md (AI usage guidelines)
-├── 90-archive/
-│   └── archive-structure.md
-├── PROJECT_STATUS.md
-├── GALERI_GOOGLE_DRIVE.md
-├── KONVENSI_NAMA_FOLDER.md
-└── PANDUAN_UPLOAD_FOTO_TIM_MEDIA.md
+│   └── terms-of-service.md
+├── 60-ai-agents/
+│   ├── best-practices.md
+│   ├── context-prompt.md
+│   └── workflow-guides.md
+└── 90-archive/
+    └── archive-structure.md
 ```
 
 ---
@@ -149,17 +145,15 @@ Rules:
 
 | Category | Folder | Files | For Who |
 |----------|--------|-------|---------|
-| **Getting Started** | `00-start-here/` | 1 | All |
-| **Organization** | `10-organisasi/` | 3 | All |
-| **SOPs** | `20-sop/` | 5 | Operators |
-| **Templates** | `30-templates/` | 12 | Operators |
-| **Technical** | `40-it-teknis/` | 10 | IT + AI |
+| **Getting Started** | `00-start-here/` | 2 | All |
+| **Organization** | `10-organisasi/` | 5 | All |
+| **SOPs** | `20-sop/` | 9 | Operators |
+| **Templates** | `30-templates/` | 11 | Operators |
+| **Technical** | `40-it-teknis/` | 3 | IT + AI |
 | **Legal** | `50-legal/` | 3 | All |
 | **AI Agents** | `60-ai-agents/` | 3 | AI + Operators |
 | **Archive** | `90-archive/` | 1 | Admin |
-| **Operational Guides** | Root `.openkb/` | 3 | Media |
-| **Status Tracking** | `PROJECT_STATUS.md` | 1 | Pengurus |
-| **TOTAL** | | **42 files** | |
+| **TOTAL** | | **37 files** | |
 
 ---
 
@@ -307,10 +301,21 @@ These docs are **RESTRICTED** (IT/Pengurus only):
 ## 📚 Related Resources
 
 - **Framework:** [ainjiner/openkb](https://github.com/ainjiner/openkb)
-- **Website:** `github.com/amalshalih/amalshalih.github.io`
+- **Website KB (teknis):** `github.com/amalshalih/amalshalih.github.io/.openkb/` — dokumentasi teknis website
 - **Trello:** Yayasan ASIB boards (4 boards)
 - **Google Drive:** Workspace ASIB structure
 - **Email:** Cloudflare Email Routing
+
+### Integrasi Website ↔ OpenKB
+
+Untuk akses silang, repo website (`amalshalih.github.io`) dapat me-submodule repo ini ke `.openkb/amalshalih/`:
+
+```bash
+cd amalshalih.github.io
+git submodule add https://github.com/amalshalih/amalshalih.git .openkb/amalshalih
+```
+
+Atau secara selektif dengan sparse checkout ke subdirektori tertentu (misal `40-it-teknis/`).
 
 ---
 
@@ -324,9 +329,9 @@ These docs are **RESTRICTED** (IT/Pengurus only):
 
 ---
 
-**Last Updated:** 7 Juni 2026  
+**Last Updated:** 8 Juni 2026  
 **Maintained by:** timitasib@gmail.com (IT/Teknis)  
-**Next Review:** 7 Desember 2026
+**Next Review:** 8 Desember 2026
 
 ---
 
