@@ -1,9 +1,27 @@
 # Branch Protection & Access Control Setup — Yayasan ASIB
 
-> **Status:** ⏳ **PENDING** — Manual setup required  
+> **Status:** ⏳ **PENDING** — Manual setup required by repo owner  
 > **Last Updated:** 9 Juni 2026  
 > **Setup By:** IT Coordinator (`timitasib@gmail.com`)  
-> **Time Required:** ~15 minutes
+> **Time Required:** ~15 minutes  
+> **⚠️ IMPORTANT:** Repo is currently PUBLIC and owned by user account `amalshalih` (not org)
+
+---
+
+## 🚨 Current Status (Verified 9 Juni 2026)
+
+**Repository:** `amalshalih/amalshalih`
+- **Visibility:** ❌ **PUBLIC** (should be private)
+- **Owner:** `amalshalih` (User account, NOT organization)
+- **Branch Protection:** ❌ **NOT ENABLED**
+- **Teams:** ❌ **NOT AVAILABLE** (requires organization)
+- **API Access:** ❌ **NO ADMIN TOKEN** (current token has read-only access)
+
+**What This Means:**
+- Branch protection CANNOT be set up via API without admin token
+- Teams CANNOT be created (requires GitHub organization)
+- Repo owner (`amalshalih` user) must manually enable protection via GitHub UI
+- Consider transferring repo to organization for proper access control
 
 ---
 
@@ -23,10 +41,40 @@ Branch protection rules prevent:
 ## 📋 Prerequisites
 
 Before starting, ensure:
-- [x] Repository is **Private** (invite-only)
-- [x] You have **Admin** access to `amalshalih/amalshalih` repo
-- [x] GitHub team structure is set up (see "Access Levels" below)
-- [ ] 2FA is enforced for organization (recommended)
+- [ ] **CONVERT TO PRIVATE:** Change repo visibility from public to private
+- [ ] **CREATE ORG (Recommended):** Transfer repo to GitHub organization for team support
+- [x] You have **Admin** access to `amalshalih/amalshalih` repo (owner only)
+- [ ] **Admin Token:** Generate personal access token with `repo` scope for API access
+- [ ] 2FA is enforced (recommended)
+
+### **Option A: Manual Setup via GitHub UI (Easiest)**
+
+**Who:** Repo owner (`amalshalih` user account)  
+**Time:** ~10 minutes
+
+1. Go to: `https://github.com/amalshalih/amalshalih/settings`
+2. Scroll to **"Danger Zone"**
+3. Click **"Change visibility"** → Make private
+4. Go to: `https://github.com/amalshalih/amalshalih/settings/branches`
+5. Click **"Add branch protection rule"**
+6. Follow steps in "Branch Protection Rules Setup" section below
+
+### **Option B: Transfer to Organization (Recommended for Teams)**
+
+**Who:** Repo owner + Org admin  
+**Time:** ~20 minutes
+
+1. Create GitHub organization: `https://github.com/organizations/new`
+2. Transfer repo: Settings → Danger Zone → Transfer ownership
+3. Set up teams in org: `https://github.com/orgs/YOUR-ORG/teams`
+4. Enable branch protection with team restrictions
+
+### **Option C: API Setup (Advanced)**
+
+**Who:** IT with admin token  
+**Time:** ~5 minutes (if you have admin token)
+
+Requires personal access token with `repo` scope from repo owner.
 
 ---
 
