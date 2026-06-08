@@ -1,0 +1,52 @@
+# Code Owners for Yayasan Amal Shalih Insan Bantul
+# Anyone listed here will be automatically requested for review
+# when their owned files are modified in a pull request.
+#
+# Format: path_pattern @github_username_or_team
+# Documentation: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# =============================================================================
+# OPENKB KNOWLEDGE BASE
+# =============================================================================
+# All documentation in .openkb/ requires IT review before merging
+.openkb/**                    @it-amma
+
+# Sensitive docs require additional review from Pengurus
+.openkb/50-legal/**           @it-amma
+.openkb/40-it-teknis/**       @it-amma
+
+# =============================================================================
+# WEBSITE CODE & CONFIGURATION
+# =============================================================================
+# All source code requires IT review
+src/**                        @it-amma
+
+# Configuration files
+*.config.*                    @it-amma
+*.toml                        @it-amma
+*.jsonc                       @it-amma
+tsconfig.json                 @it-amma
+package.json                  @it-amma
+
+# Environment & secrets (should never be committed, but extra protection)
+.env*                         @it-amma
+*.key                         @it-amma
+*.json                        @it-amma
+
+# =============================================================================
+# GITHUB WORKFLOWS & CI/CD
+# =============================================================================
+# Workflow changes require careful review
+.github/**                    @it-amma
+
+# =============================================================================
+# PUBLIC ASSETS
+# =============================================================================
+# Static assets can be merged without review (optional)
+# public/**                   @media-amalshalih
+
+# =============================================================================
+# ROOT FILES
+# =============================================================================
+# Catch-all for any files not matched above
+*                             @it-amma
