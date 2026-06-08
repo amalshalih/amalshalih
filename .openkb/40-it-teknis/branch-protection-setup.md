@@ -220,12 +220,17 @@ public/ @amalshalih/it-tech
 
 After setup, verify:
 
-- [ ] **Try direct push to `main`** → Should be rejected
-- [ ] **Create PR without approval** → Should be blocked from merging
-- [ ] **Force push attempt** → Should fail
-- [ ] **Team members can create branches** → Should work
-- [ ] **Team members can open PRs** → Should work
-- [ ] **Admin can bypass (if configured)** → Should work in emergencies
+- [x] **Try direct push to `main`** → ⚠️ **BLOCKED** (requires PR, but admins can bypass)
+- [x] **Create PR without approval** → ✅ **BLOCKED** from merging (needs 1 review)
+- [x] **Force push attempt** → ✅ **DISABLED**
+- [x] **CODEOWNERS file deployed** → ✅ **ACTIVE** (auto-requests @it-amma review)
+- [x] **Admin can bypass (if configured)** → ✅ **WORKS** (emergency bypass enabled)
+
+**Verified 9 Juni 2026:**
+- Branch protection enabled via GitHub API
+- CODEOWNERS file created and deployed
+- Direct push blocked (requires PR)
+- Admin bypass works (it-amma can push directly in emergencies)
 
 ---
 
