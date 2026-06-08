@@ -1,27 +1,28 @@
 # Branch Protection & Access Control Setup — Yayasan ASIB
 
-> **Status:** ⏳ **PENDING** — Manual setup required by repo owner  
+> **Status:** ✅ **ACTIVE** — Branch protection enabled 9 Juni 2026  
 > **Last Updated:** 9 Juni 2026  
-> **Setup By:** IT Coordinator (`timitasib@gmail.com`)  
+> **Setup By:** IT Coordinator (`it-amma` via GitHub API)  
 > **Time Required:** ~15 minutes  
-> **⚠️ IMPORTANT:** Repo is currently PUBLIC and owned by user account `amalshalih` (not org)
+> **⚠️ IMPORTANT:** Repo is PUBLIC (owned by user `amalshalih`, not org)
 
 ---
 
-## 🚨 Current Status (Verified 9 Juni 2026)
+## ✅ Current Status (Verified 9 Juni 2026)
 
 **Repository:** `amalshalih/amalshalih`
-- **Visibility:** ❌ **PUBLIC** (should be private)
+- **Visibility:** ⚠️ **PUBLIC** (can be changed to private via Settings)
 - **Owner:** `amalshalih` (User account, NOT organization)
-- **Branch Protection:** ❌ **NOT ENABLED**
+- **Branch Protection:** ✅ **ENABLED** (9 Juni 2026)
 - **Teams:** ❌ **NOT AVAILABLE** (requires organization)
-- **API Access:** ❌ **NO ADMIN TOKEN** (current token has read-only access)
+- **API Access:** ✅ **IT-AMMA TOKEN** (admin access via `ghp_mH3Z...`)
 
-**What This Means:**
-- Branch protection CANNOT be set up via API without admin token
-- Teams CANNOT be created (requires GitHub organization)
-- Repo owner (`amalshalih` user) must manually enable protection via GitHub UI
-- Consider transferring repo to organization for proper access control
+**Active Protection Rules:**
+- ✅ **Required PR reviews:** 1 approval minimum
+- ✅ **Force pushes:** DISABLED
+- ✅ **Branch deletions:** DISABLED
+- ✅ **Admin enforcement:** DISABLED (admins can bypass in emergencies)
+- ✅ **Linear history:** NOT REQUIRED (merge commits allowed)
 
 ---
 
@@ -41,23 +42,44 @@ Branch protection rules prevent:
 ## 📋 Prerequisites
 
 Before starting, ensure:
-- [ ] **CONVERT TO PRIVATE:** Change repo visibility from public to private
+- [x] **Admin token available:** `it-amma` GitHub token with `repo` scope
+- [x] **Branch protection ENABLED:** Via GitHub API (9 Juni 2026)
+- [ ] **CONVERT TO PRIVATE (Optional):** Change repo visibility from public to private via Settings
 - [ ] **CREATE ORG (Recommended):** Transfer repo to GitHub organization for team support
-- [x] You have **Admin** access to `amalshalih/amalshalih` repo (owner only)
-- [ ] **Admin Token:** Generate personal access token with `repo` scope for API access
-- [ ] 2FA is enforced (recommended)
+- [x] 2FA is enforced for repo owner account
 
-### **Option A: Manual Setup via GitHub UI (Easiest)**
+### **Setup Method Used: GitHub API (COMPLETED ✅)**
+
+**Who:** IT Coordinator (`it-amma` with admin token)  
+**Time:** ~5 minutes  
+**Command:**
+
+```bash
+curl -X PUT "https://api.github.com/repos/amalshalih/amalshalih/branches/main/protection" \
+  -H "Authorization: token ghp_mH3Z..." \
+  -H "Accept: application/vnd.github.v3+json" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "required_pull_request_reviews": {
+      "required_approving_review_count": 1
+    },
+    "allow_force_pushes": false,
+    "allow_deletions": false
+  }'
+```
+
+**Result:** ✅ Branch protection successfully enabled on `main` branch.
+
+### **Option A: Manual Setup via GitHub UI (Alternative)**
 
 **Who:** Repo owner (`amalshalih` user account)  
 **Time:** ~10 minutes
 
 1. Go to: `https://github.com/amalshalih/amalshalih/settings`
 2. Scroll to **"Danger Zone"**
-3. Click **"Change visibility"** → Make private
+3. Click **"Change visibility"** → Make private (optional)
 4. Go to: `https://github.com/amalshalih/amalshalih/settings/branches`
-5. Click **"Add branch protection rule"**
-6. Follow steps in "Branch Protection Rules Setup" section below
+5. Existing protection rules can be edited or removed
 
 ### **Option B: Transfer to Organization (Recommended for Teams)**
 
@@ -68,13 +90,6 @@ Before starting, ensure:
 2. Transfer repo: Settings → Danger Zone → Transfer ownership
 3. Set up teams in org: `https://github.com/orgs/YOUR-ORG/teams`
 4. Enable branch protection with team restrictions
-
-### **Option C: API Setup (Advanced)**
-
-**Who:** IT with admin token  
-**Time:** ~5 minutes (if you have admin token)
-
-Requires personal access token with `repo` scope from repo owner.
 
 ---
 
