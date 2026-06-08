@@ -1,11 +1,11 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/it-amma/it-amma/main/assets/banner.svg" alt="Yayasan Amal Shalih Insan Bantul" width="100%">
+  <img src="https://raw.githubusercontent.com/amalshalih/amalshalih/main/assets/banner.svg" alt="Yayasan Amal Shalih Insan Bantul" width="100%">
 </div>
 
 <h1 align="center">Assalamu'alikum Warahmatullahi Wabarakatuh 🙏</h1>
 
 <p align="center">
-  <b>Yayasan Amal Shalih Insan Bantul</b> — 
+  <b>Yayasan Amal Shalih Insan Bantul (ASIB)</b> — 
   Menebar kebaikan, membangun peradaban melalui pendidikan, sosial, dan dakwah.
 </p>
 
@@ -28,7 +28,7 @@
 
 ## 🕌 Tentang Kami
 
-**Yayasan Amal Shalih Insan Bantul (ASIB)** bergerak di bidang:
+**Yayasan Amal Shalih Insan Bantul (ASIB)** adalah lembaga nirlaba yang berfokus pada:
 
 | 🌱 Pendidikan | 🤝 Sosial | 📖 Dakwah |
 |---|---|---|
@@ -37,44 +37,97 @@
 
 > *"Sebaik-baik manusia adalah yang paling bermanfaat bagi manusia lain."* (HR. Ahmad)
 
-## 📊 GitHub Stats
+---
 
-<div align="center">
-  <img height="180em" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=it-amma&theme=github_dark" alt="GitHub Profile">
-</div>
+## 🌐 Repo Tunggal Utama OpenKB — Yayasan ASIB
 
-<div align="center">
-  <img height="180em" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=it-amma&theme=github_dark" alt="GitHub Stats">
-  <img height="180em" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=it-amma&theme=github_dark" alt="Top Languages">
-</div>
+Repository ini merupakan **Single Source of Truth (Repo Tunggal Utama) Knowledge Base** Yayasan ASIB yang dibangun menggunakan kerangka **OpenKB** milik [`ainjiner/openkb`](https://github.com/ainjiner/openkb). 
 
-## 🛠️ Tech Stack
+Knowledge base ini dirancang secara terstruktur agar dapat digunakan dan dikolaborasikan secara dinamis oleh:
+- 👥 **Operator (Manusia):** Pengurus, Admin, Media, IT, dan Relawan AMMA.
+- 🤖 **AI / AI Agent:** Claude, Cursor, ChatGPT, dan asisten digital lainnya untuk mempermudah pengerjaan tugas sehari-hari.
+- 🔐 **Consumer:** Publik, donatur, atau pihak eksternal (dengan sistem otorisasi khusus).
 
-<div align="center">
-  <img src="https://img.shields.io/badge/Astro-6.4-FF5D01?logo=astro&logoColor=white" alt="Astro">
-  <img src="https://img.shields.io/badge/Cloudflare%20Workers-deployed-F38020?logo=cloudflare&logoColor=white" alt="Cloudflare Workers">
-  <img src="https://img.shields.io/badge/Sanity-CMS-F97316?logo=sanity&logoColor=white" alt="Sanity CMS">
-  <img src="https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?logo=tailwindcss&logoColor=white" alt="Tailwind CSS">
-  <img src="https://img.shields.io/badge/Sentry-monitored-362D59?logo=sentry&logoColor=white" alt="Sentry">
-  <img src="https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white" alt="TypeScript">
-  <img src="https://img.shields.io/badge/Bun-runtime-000?logo=bun&logoColor=white" alt="Bun">
-</div>
+---
 
-## 📌 Pinned Projects
+## 📁 Struktur Pengetahuan OpenKB (`.openkb/`)
 
-### [amalshalih.github.io](https://github.com/it-amma/amalshalih.github.io)
-> Website resmi Yayasan Amal Shalih Insan Bantul — Astro 6 + Cloudflare Workers + Sanity CMS.  
-> Fitur: blog, kegiatan, galeri foto, donasi, manajemen konten real-time.
+Seluruh pengetahuan dan pedoman operasional yayasan disimpan di dalam folder [**.openkb/**](https://github.com/amalshalih/amalshalih/tree/main/.openkb):
 
-## 📫 Kontak
+```
+.openkb/
+├── README.md                           # Indeks utama OpenKB (dokumen ini)
+├── 00-start-here/
+│   └── README.md                       # Panduan onboarding anggota & relawan baru
+├── 10-organisasi/
+│   ├── struktur-dan-role.md            # Pengurus, kontak, direktori, matriks akses
+│   ├── email-dan-akses.md              # Struktur perutean email yayasan
+│   ├── workspace-management.md         # Manajemen workspace Google Drive & Trello
+│   ├── yayasan-profile.md              # Profil legalitas resmi yayasan (NIB, NPWP, Bank)
+│   └── humas-decision-analysis.md      # Analisis perutean humas@amalshalih.or.id
+├── 20-sop/
+│   ├── rapat-workflow.md               # SOP penyelenggaraan rapat (daring & luring)
+│   ├── kegiatan-workflow.md            # SOP pelaksanaan acara/program (ide s.d laporan)
+│   ├── media-sosial.md                 # SOP pengelolaan konten Instagram, FB, TikTok, YT
+│   ├── donasi-handling.md              # SOP konfirmasi donasi & pencatatan keuangan
+│   ├── onboarding-relawan.md           # SOP onboarding Relawan AMMA
+│   └── workflow-kanban.md              # Pedoman kerja Kanban Trello (Gotong Royong Digital)
+├── 30-templates/
+│   ├── template-agenda.md / notulen.md / decision-log.md # Template rapat
+│   ├── kwitansi-donasi.md / laporan-keuangan.md / rab-template.md # Template keuangan
+│   ├── content-calendar.md / caption-templates.md # Template media sosial
+│   └── email-templates.md / laporan-bulanan.md # Template korespondensi & publikasi
+├── 40-it-teknis/
+│   ├── infrastructure.md / security.md # IT infrastruktur & panduan keamanan 2FA
+│   ├── credentials.md                  # Panduan password manager (restricted)
+│   ├── ARCHITECTURE.md                 # Keputusan arsitektur website Astro v6 + Cloudflare
+│   ├── cms-integration.md              # Integrasi Astro dengan Sanity CMS
+│   ├── deployment.md / commit-strategy.md # Panduan deploy & aturan commit git
+│   ├── email-system.md                 # Setup teknis perutean email di Cloudflare
+│   └── [audit files & guides]          # Audit teknis & panduan troubleshooting error
+├── 50-legal/
+│   ├── privacy-policy.md               # Kebijakan privasi (UU PDP No. 27 Tahun 2022)
+│   ├── terms-of-service.md             # Ketentuan layanan untuk website
+│   └── document-storage.md             # Kebijakan retensi dan pengarsipan dokumen
+├── 60-ai-agents/ (NEW!)
+│   ├── context-prompt.md               # Prompt instruksi utama untuk asupan AI Agent
+│   ├── workflow-guides.md              # Panduan kolaborasi manusia-AI (Human-in-the-Loop)
+│   └── best-practices.md               # Praktik terbaik penggunaan AI & privasi data
+└── 90-archive/
+    └── archive-structure.md            # Struktur pengarsipan file bersejarah
+```
+
+---
+
+## 🚀 Memulai Penggunaan (Quick Start)
+
+### **Bagi Operator (Manusia)**
+1. **Anggota/Relawan Baru:** Mulailah membaca [**`00-start-here/README.md`**](https://github.com/amalshalih/amalshalih/tree/main/.openkb/00-start-here/README.md).
+2. **Menjalankan Tugas:** Ikuti SOP terkait di [**`20-sop/`**](https://github.com/amalshalih/amalshalih/tree/main/.openkb/20-sop) dan gunakan template yang sesuai di [**`30-templates/`**](https://github.com/amalshalih/amalshalih/tree/main/.openkb/30-templates).
+3. **Koordinasi:** Gunakan Trello Board dan Google Drive Workspace sesuai pedoman di [**`10-organisasi/workspace-management.md`**](https://github.com/amalshalih/amalshalih/tree/main/.openkb/10-organisasi/workspace-management.md).
+
+### **Bagi AI Agent (Claude/Cursor/GPT)**
+1. **Asupan Konteks:** AI diinstruksikan untuk membaca seluruh folder `.openkb/` sebagai basis pengetahuan utama.
+2. **System Prompt:** Gunakan panduan dan prompt di [**`60-ai-agents/context-prompt.md`**](https://github.com/amalshalih/amalshalih/tree/main/.openkb/60-ai-agents/context-prompt.md) untuk memastikan AI beroperasi dalam koridor keamanan yayasan.
+
+---
+
+## 🛠️ Hubungan dengan Project Lain
+
+### **[amalshalih.github.io](https://github.com/amalshalih/amalshalih.github.io)**
+> Codebase website resmi Yayasan ASIB (Astro v6 + Tailwind v4 + Cloudflare Workers + Sanity CMS). Website mem-fetch data berita/kegiatan secara dinamis menggunakan Sanity CMS.
+
+---
+
+## 📫 Kontak & Otorisasi Akses
 
 | Media | Link |
 |---|---|
-| 🌐 Website | [amalshalih.or.id](https://amalshalih.or.id) |
-| 📧 Email | [timitasib@gmail.com](mailto:timitasib@gmail.com) |
-| 📷 Instagram | [@amalshalih](https://instagram.com/amalshalih) |
-| ▶️ YouTube | [@amalshalih](https://youtube.com/@amalshalih) |
-| 📍 Lokasi | Bantul, Daerah Istimewa Yogyakarta, Indonesia |
+| 🌐 Website Resmi | [amalshalih.or.id](https://amalshalih.or.id) |
+| 📧 Email Utama (Admin) | [amalshalih.insanbantul@gmail.com](mailto:amalshalih.insanbantul@gmail.com) |
+| 📧 Email IT & Support | [timitasib@gmail.com](mailto:timitasib@gmail.com) |
+| 📧 Email Media | [media.amalshalih@gmail.com](mailto:media.amalshalih@gmail.com) |
+| 📍 Lokasi Sekretariat | Bantul, Daerah Istimewa Yogyakarta, Indonesia |
 
 ---
 
