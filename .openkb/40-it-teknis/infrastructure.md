@@ -48,9 +48,9 @@
        ▼
 ┌──────────────┐
 │   Hosting    │
-│ (Niagahoster)│
-│ - Website    │
-│ - cPanel     │
+│  (Workers)   │
+│ - SSR Engine │
+│ - KV Cache   │
 └──────────────┘
 
 ┌──────────────────────────────────────────────────────────────┐
@@ -85,7 +85,7 @@
 |---------|---------------|-----------------|---------|
 | **Domain (.or.id)** | IT (timitasib@gmail.com) | Pengurus Ketua | Free (PANDI nonprofit) |
 | **Cloudflare DNS** | IT | Pengurus Ketua | Free |
-| **Hosting (Niagahoster)** | IT | Pengurus Ketua | Paid (annual) |
+| **Hosting (Cloudflare Workers)** | IT | Pengurus Ketua | Paid (annual) |
 | **Google Workspace** | IT | Pengurus Ketua | Free (Nonprofit) |
 | **Email Routing** | IT | Pengurus Ketua | Free |
 | **Trello** | IT (Admin) | Pengurus | Free |
@@ -147,14 +147,14 @@ CNAME   | _dmarc              | v=DMARC1; p=none         | ❌
 - Cost: ~Rp 50.000/tahun (nonprofit discount)
 - Documents: Same as registration
 
-### **2. Hosting: Niagahoster**
+### **2. Hosting: Cloudflare Workers (SSR)**
 
 **Plan:** [Check plan details]  
 **Billing:** Annual  
 **Next Billing:** [Date]
 
 **Features:**
-- cPanel access
+- Cloudflare Workers Dashboard access
 - Unlimited bandwidth
 - [X] GB SSD storage
 - Free SSL (Let's Encrypt)
@@ -162,7 +162,7 @@ CNAME   | _dmarc              | v=DMARC1; p=none         | ❌
 - 1-click WordPress install
 
 **cPanel Access:**
-- URL: `https://amalshalih.or.id/cpanel`
+- URL: `https://dash.cloudflare.com/` (Workers & Pages)
 - Username: [Username di password manager]
 - Password: [Password di password manager]
 - 2FA: ✅ Enabled (Google Auth)

@@ -138,7 +138,7 @@ Berikut opsi yang bisa dikerjakan siang ini, diurutkan dari yang paling penting:
 |---|------|--------|--------|
 | 4 | **RSS Feed** | `@astrojs/rss` sudah di dependencies tapi belum dipakai. Buat `/rss.xml` dari content collection. | ~20 menit |
 | 5 | **Sitemap enhancement** | Sitemap sudah ada via `@astrojs/sitemap`. Bisa tambah `lastmod`, `changefreq`, `priority`. | ~15 menit |
-| 6 | **Integration test** | Test form kontak (Formspree) apakah correctly configured. | ~15 menit |
+| 6 | **Integration test** | Test form kontak (Resend API) apakah correctly configured. | ~15 menit |
 | 7 | **Open graph image** | Buat OG image template (1200×630) dengan logo + nama yayasan biar tiap page punya OG image yang proper. | ~1 jam |
 | 8 | **Copywriting audit** | Review all English vs Indonesian consistency, formal tone, Islamic terminology correctness. | ~30 menit |
 
@@ -225,5 +225,5 @@ Slot bisa diisi icon + teks.
 - **Static scanner limitation**: Tailwind v4 cannot detect template-literal classes (`h-${size}`). Always provide fallback with explicit attributes (width/height on SVG)
 - **`.astro` only**: No JSX/React — pure Astro components
 - **No JS runtime**: Zero client JavaScript (static site)
-- **Form**: Kontak form submits to Formspree (`https://formspree.io/f/xldjjnnw`) — no server-side handler needed
+- **Form**: Kontak form submits to Resend API via `/api/kontak` — no server-side handler needed
 - **Font**: No custom font loading — uses system font stack (Inter/Noto Sans/fallback)

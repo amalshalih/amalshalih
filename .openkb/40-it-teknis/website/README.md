@@ -49,4 +49,3 @@ Workflow deployment, konvensi commit, dan tool debugging (Spotlight). Target: **
 
 > **Catatan:** OpenKB organisasi yayasan (SOP, template, legal, AI agents, panduan media, dll.) tersedia di [`amalshalih/amalshalih/.openkb/`](https://github.com/amalshalih/amalshalih/tree/main/.openkb).  
 > **Integrasi masa depan:** `.openkb/` website dapat me-submodule `amalshalih/amalshalih/.openkb/` ke subdirektori `amalshalih/` untuk akses silang.
-# Test sync verification
