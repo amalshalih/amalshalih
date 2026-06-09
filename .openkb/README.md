@@ -336,3 +336,40 @@ Atau secara selektif dengan sparse checkout ke subdirektori tertentu (misal `40-
 ---
 
 *"OpenKB adalah jantung kolaborasi Yayasan ASIB. Semua pengetahuan dalam satu tempat, dapat diakses oleh manusia dan AI, untuk kerja yang lebih efektif dan transparan."*
+---
+
+## 🌐 Website Technical Documentation
+
+Website-specific technical documentation for `amalshalih.github.io` is maintained in:
+
+**`40-it-teknis/website/`**
+
+This includes:
+- **Architecture decisions** (Astro v6 + Cloudflare Workers)
+- **CMS integration** (Sanity CMS strategy & implementation)
+- **Deployment procedures** (Cloudflare Workers, commit strategy)
+- **Email system setup** (Cloudflare Email Routing)
+- **Monitoring & observability** (Sentry, Spotlight)
+
+**Access in website repository:** Via git submodule at `.openkb/`
+
+**For AI Agents:** Full technical context available at:
+- Central: `https://github.com/amalshalih/amalshalih/.openkb/40-it-teknis/website/`
+- Website mirror: `.openkb/` (symlinked in website repo)
+
+---
+
+## 📖 Public Documentation
+
+User-facing documentation for donors, volunteers, and general public:
+
+**`00-start-here/public/`**
+
+Contains:
+- **User Guide** — How to use website and services
+- **Donor FAQ** — Frequently asked questions from donors
+- **Volunteer Guide** — How to join as volunteer
+
+**Access:** Via git submodule at `docs/` in website repository
+
+---
